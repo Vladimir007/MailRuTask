@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Mail ru task">
+		<meta name="author" content="Vladimir Gratinskii">
+        <link rel="icon" href="/images/icon.ico">
+		<title><%= $title %></title>
+		<script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/jquery.flip.min.js"></script>
+		<script type="text/javascript" src="/notify.min.js"></script>
+		<script type="text/javascript" src="/webApp.js"></script>
+		<link href="/webApp.css" rel="stylesheet" />
+	</head>
+	<body>
+		<a href="/refresh/" style="float: left;">Refresh DB</a>
+		<br>
+		<% if ($error_message) { %>
+			<h1 style="color: red;"><%= $error_message %></h1>
+		<% } else { %>
+			<div class="images-table">
+			<% foreach my $img_row (@{$images}) { %>
+				<div class="images-row">
+					<% foreach my $im_data (@{$img_row}) { %>
+						<div class="images-cell">
+							<div class="front">
+								<img width="100px" height="100px" src="<%= $im_data->[1] %>"><br>
+								<span class="image-comment"><%= $im_data->[2] %></span>
+								<span class="image-id" hidden><%= $im_data->[0] %></span>
+							</div>
+							<div class="back">
+								<img width="100px" height="100px"><br>
+								<span class="image-comment"></span>
+								<span class="image-id" hidden></span>
+							</div>
+						</div>
+					<% } %>
+				</div>
+			<% }%>
+			</div>
+		<% } %>
+	</body>
+</html>

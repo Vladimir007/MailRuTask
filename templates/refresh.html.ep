@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Mail ru task">
+		<meta name="author" content="Vladimir Gratinskii">
+        <link rel="icon" href="/images/icon.ico">
+		<title><%= $title %></title>
+		<script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/jquery.flip.min.js"></script>
+		<script type="text/javascript" src="/notify.min.js"></script>
+		<script type="text/javascript" src="/webApp.js"></script>
+		<link href="/webApp.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>Refreshing images in the DB</h1>
+		<a href="/?M=1&N=1" class="button" style="float:right;">Back</a>
+		<button id="update_cache" class="button">Check cache and recalculate it if somethong wrong</button>
+		<hr>
+		<div style="display: table;">
+			<div class="checkbox">
+				<input id="clear_db" type="checkbox" checked>
+				<label for="clear_db"></label>
+			</div>
+			<div id="text_for_clear_db">Clear DB before filling</div>
+		</div>
+		
+		<br>
+		<button id="start_refreshing" class="button">Fill DB with:</button>
+		<div class="select-style">
+			<select id="refresh_type">
+				<option value="1" selected>Default images</option>
+				<option value="2">Random images (one picture)</option>
+				<option value="3">Data from file</option>
+			</select>
+		</div>
+		<br><br>
+		<div id="rand_number_div" style="display:none;">
+			<label for="rand_number"></label>
+			<input id="rand_number" type="number" value="100">
+		</div>
+		<div id="upload_file_div" style="display:none;">
+			<span class="button btn-file">Browse<input id="csv_file_input" type="file"></span>
+			<span class="btn-file-name"></span>
+		</div>
+	</body>
+</html>

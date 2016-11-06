@@ -1,0 +1,158 @@
+.image-comment {
+	text-align: center;
+}
+.images-table {
+	
+}
+.images-row {
+	display: table;
+	table-layout: fixed; /*Optional*/
+	border-spacing: 10px; /*Optional*/
+}
+.images-cell {
+	padding: 5px;
+	display: table-cell;
+	border: 2px solid black;
+	border-radius: 5px;
+	min-width: 130px;
+	height: 130px;
+	text-align: center;
+	cursor: pointer;
+}
+.image-comment {
+	color: #4e26a5;
+	font-style: italic;
+}
+
+.button {
+	background-color:#fffff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #cce0ed;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	padding:5px 31px;
+	text-decoration:none;
+	text-shadow:0px 2px 1px #5d82a6;
+	margin-right: 20px;
+}
+.button:hover {
+	background-color:#f7f2f7;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+.button:disabled {
+    background: #f7f2f7;
+	cursor: default;
+	color: grey;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    display: block;
+}
+
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 250px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+#start_refreshing {
+	float: left;
+}
+#rand_number {
+	border: 1px solid black;
+	border-radius: 3px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	padding: 10px;
+}
+#rand_number_div, #upload_file_div {
+	margin-left: 30px;
+}
+.btn-file-name {
+	font-style: italic;
+	font-size: 16px;
+	color: #3f3b51;
+}
+
+.checkbox {
+	display: table-cell;
+	width: 25px;
+	margin: 20px 100px;
+	position: relative;
+}
+.checkbox label {
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 0;
+  	left: 0;
+	background: #eee;
+	border:1px solid #ddd;
+}
+.checkbox label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 6px;
+	left: 7px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+
+	transform: rotate(-45deg);
+}
+.checkbox label:hover::after {
+	opacity: 0.5;
+}
+.checkbox input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
+#text_for_clear_db {
+	padding-left: 10px;
+	display: table-cell;
+	cursor: pointer;
+}
